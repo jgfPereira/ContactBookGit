@@ -34,7 +34,7 @@ public class Main {
 
     public static final String REPEATED_NUMBERS = "There are contacts that share phone numbers.";
 
-    public static final String NO_REPEATED_NUMBERS = "All contacts have different phone numbers";
+    public static final String NO_REPEATED_NUMBERS = "All contacts have different phone numbers.";
 
 
     public static void main(String[] args) {
