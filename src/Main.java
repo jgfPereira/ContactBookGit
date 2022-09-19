@@ -32,6 +32,11 @@ public class Main {
 
     public static final String PHONE_NUM_NOT_FOUND = "Phone number does not exist.";
 
+    public static final String REPEATED_NUMBERS = "There are contacts that share phone numbers.";
+
+    public static final String NO_REPEATED_NUMBERS = "All contacts have different phone numbers";
+
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         ContactBook cBook = new ContactBook();
@@ -172,6 +177,9 @@ public class Main {
     }
 
     private static void sameNumber(ContactBook cBook) {
-
+        if(cBook.hasRepeatedPhoneNumbers())
+            System.out.println(REPEATED_NUMBERS);
+        else
+            System.out.println(NO_REPEATED_NUMBERS);
     }
 }
