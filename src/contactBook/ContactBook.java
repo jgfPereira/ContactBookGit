@@ -84,6 +84,10 @@ public class ContactBook {
         currentContact = 0;
     }
 
+    public void initializeIterator(int index) {
+        currentContact = index;
+    }
+
     public boolean hasNext() {
         return (currentContact >= 0 ) && (currentContact < counter);
     }
