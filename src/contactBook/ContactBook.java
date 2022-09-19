@@ -73,22 +73,15 @@ public class ContactBook {
         return result;
     }
 
-    private boolean hasRepeatedPhoneNumbers() {
+    private String getName(int phone) {
         int i = 0;
-
-        while(i < contacts.length - 1) {
-            initializeIterator(i+1);
-
-            while(hasNext()) {
-                Contact c = next();
-                if(c.getPhone() == contacts[i].getPhone())
-                    return true;
-            }
-
-            i++;
-        }
-
-        return false;
+        boolean found = false;
+        while (i<counter && !found)
+            if (contacts[i].getPhone() == phone)
+                found = true;
+            else
+                i++;
+        return contacts[i].getName();
     }
 
     private void resize() {
