@@ -73,7 +73,7 @@ public class ContactBook {
         return result;
     }
 
-    private String getName(int phone) {
+    public String getName(int phone) {
         int i = 0;
         boolean found = false;
         while (i<counter && !found)
@@ -81,10 +81,13 @@ public class ContactBook {
                 found = true;
             else
                 i++;
+        if found
         return contacts[i].getName();
+        else
+            return null;
     }
 
-    private boolean hasRepeatedPhoneNumbers() {
+    public boolean hasRepeatedPhoneNumbers() {
         int i = 0;
 
         while(i < contacts.length - 1) {
