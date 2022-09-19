@@ -160,6 +160,10 @@ public class Main {
     }
     private static void getContactName(Scanner in, ContactBook cBook){
 
+        int phoneNum = in.nextInt();
+        in.nextLine();
+
+
     }
     private static void sameNumber(ContactBook cBook){
 
