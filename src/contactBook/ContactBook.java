@@ -81,7 +81,7 @@ public class ContactBook {
                 found = true;
             else
                 i++;
-        if found
+        if (found)
         return contacts[i].getName();
         else
             return null;
