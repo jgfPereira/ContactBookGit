@@ -73,6 +73,24 @@ public class ContactBook {
         return result;
     }
 
+    private boolean hasRepeatedPhoneNumbers() {
+        int i = 0;
+
+        while(i < contacts.length - 1) {
+            initializeIterator(i+1);
+
+            while(hasNext()) {
+                Contact c = next();
+                if(c.getPhone() == contacts[i].getPhone())
+                    return true;
+            }
+
+            i++;
+        }
+
+        return false;
+    }
+
     private void resize() {
         Contact tmp[] = new Contact[2*contacts.length];
         for (int i=0;i<counter; i++)
